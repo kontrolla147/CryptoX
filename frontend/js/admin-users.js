@@ -1,4 +1,4 @@
-const API = window.location + "/api/admin"
+const API = window.location.origin + "/api/admin"
 
 const token = localStorage.getItem("token")
 

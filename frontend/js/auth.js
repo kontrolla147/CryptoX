@@ -1,4 +1,4 @@
-const API = window.location + "/api/auth"
+const API = window.location.origin + "/api/auth"
 
 async function register() {
   const username = document.getElementById("username").value.trim()
