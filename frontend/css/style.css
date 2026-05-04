@@ -113,23 +113,6 @@ body {
   
   
 }
-/* DESKTOP (hide sidebar) */
-
-@media (min-width: 768px) {
-
-  .sidebar {
-
-    display: none;
-
-  }
-
-  .overlay {
-
-    display: none !important;
-
-  }
-
-}
 
 
 
@@ -1481,101 +1464,6 @@ color: gold;
 .fade-out {
   opacity: 0;
 }
-/* =========================
-   MOBILE FIX (OVERRIDES)
-========================= */
-@media (max-width: 768px) {
 
-  /* GLOBAL SPACING */
-  section,
-  .hero-section,
-  .testimonial-section,
-  .market-section,
-  .plans-side,
-  .how-simple,
-  .live-activity {
-    padding: 40px 20px !important;
-  }
-
-  /* NAVBAR */
-  .nav-links {
-    width: 100%;
-    text-align: center;
-  }
-
-  /* HERO */
-  .hero-section {
-    flex-direction: column !important;
-    text-align: center;
-  }
-
-  .hero-left h1 {
-    font-size: 1.8rem !important;
-  }
-
-  .hero-right img {
-    max-width: 280px !important;
-  }
-
-  /* FIX BIG BORDER RADIUS */
-  .image-card,
-  .testimonial-section {
-    border-radius: 20px !important;
-  }
-
-  /* FIX HUGE IMAGE HEIGHT */
-  .image-card {
-    height: 280px !important;
-  }
-
-  /* SLIDER */
-  .hero-slider {
-    height: 40vh !important;
-  }
-
-  /* GRID FIX */
-  .live-stats,
-  .dashboard,
-  .grid,
-  .plans-row,
-  .footer-container {
-    display: grid !important;
-    grid-template-columns: 1fr !important;
-  }
-
-  /* TESTIMONIAL */
-  .testimonial-container {
-    grid-template-columns: 1fr !important;
-    gap: 30px !important;
-  }
-
-  /* TEXT SIZE */
-  h1 { font-size: 1.8rem !important; }
-  h2 { font-size: 1.4rem !important; }
-  p  { font-size: 14px !important; }
-
-  /* TABLE */
-  .market-table {
-    font-size: 12px;
-    overflow-x: auto;
-    display: block;
-  }
-
-  /* FLOW SECTION */
-  .flow {
-    flex-direction: column !important;
-  }
-
-  .flow-line {
-    width: 2px !important;
-    height: 30px !important;
-  }
-
-  /* FOOTER */
-  .footer-container {
-    text-align: center !important;
-  }
-
-}
 
 
