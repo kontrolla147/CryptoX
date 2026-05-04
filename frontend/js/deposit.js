@@ -1,9 +1,10 @@
-const API = window.location.origin + "/api/user"
+
 
 const token = localStorage.getItem("token")
 
 if (!token) window.location = "login.html"
 
+const API = window.location.origin + "/api/user"
 // LOAD WALLETS
 async function loadWallets() {
   const res = await fetch(API + "/me", {

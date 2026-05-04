@@ -1,4 +1,4 @@
-const API = window.location.origin + "/api/user"
+
 
 const token = localStorage.getItem("token")
 
@@ -6,6 +6,7 @@ if (!token) {
   window.location = "login.html"
 }
 
+const API = window.location.origin + "/api/user"
 
 // =========================
 // LOAD DASHBOARD DATA

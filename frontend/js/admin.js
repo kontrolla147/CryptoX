@@ -1,5 +1,5 @@
 
-const API = window.location.origin + "/api/admin"
+
 
 const token = localStorage.getItem("token")
 const role = localStorage.getItem("role")
@@ -7,6 +7,9 @@ const role = localStorage.getItem("role")
 if (!token || role !== "admin") {
   window.location = "login.html"
 }
+
+
+const API = window.location.origin + "/api/admin"
 
 let usersData = []
 
