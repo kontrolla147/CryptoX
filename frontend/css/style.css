@@ -113,6 +113,23 @@ body {
   
   
 }
+/* DESKTOP (hide sidebar) */
+
+@media (min-width: 768px) {
+
+  .sidebar {
+
+    display: none;
+
+  }
+
+  .overlay {
+
+    display: none !important;
+
+  }
+
+}
 
 
 
