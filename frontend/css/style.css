@@ -1464,6 +1464,11 @@ color: gold;
 .fade-out {
   opacity: 0;
 }
+.switch1{
+  text-decoration: none;
+color: rgba(255, 255, 255, 0.424);
+
+}
 
 
 
