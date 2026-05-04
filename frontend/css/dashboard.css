@@ -1,0 +1,406 @@
+body {
+  margin: 0;
+  font-family: Arial;
+  background: #0b0f19;
+  color: white;
+}
+/* =========================
+   LAYOUT
+========================= */
+.layout {
+  display: flex;
+  min-height: 100vh;
+}
+
+/* =========================
+   SIDEBAR
+========================= */
+.sidebar {
+  width: 200px;
+  background: #11182b;
+
+  position: fixed;
+  top: 0;
+  left: 0;
+
+  height: 97vh;         
+  overflow-y: auto;       
+
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+
+  transition: 0.3s;
+}
+
+/* LOGO */
+.sidebar .logo {
+  color: gold;
+  margin-bottom: 20px;
+}
+
+/* LINKS */
+.sidebar a {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  text-decoration: none;
+  color: #aaa;
+  padding: 12px;
+  border-radius: 8px;
+  transition: 0.3s;
+}
+
+.sidebar a i {
+  width: 20px;
+}
+
+/* HOVER */
+.sidebar a:hover {
+  background: #1f2937;
+  color: white;
+  transform: translateX(5px);
+}
+
+/* ACTIVE */
+.sidebar a.active {
+  background: #1f2937;
+  color: gold;
+}
+
+/* LOGOUT */
+.sidebar button {
+  margin-top: auto;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background: red;
+  padding: 12px;
+  border: none;
+  border-radius: 8px;
+  color: white;
+  cursor: pointer;
+}
+.sidebar::-webkit-scrollbar {
+  width: 6px;
+}
+
+.sidebar::-webkit-scrollbar-thumb {
+  background: #444;
+  border-radius: 10px;
+}
+
+/* =========================
+   MAIN FIX (IMPORTANT)
+========================= */
+.main {
+  margin-left: 230px;
+  padding: 20px;
+  width: 100%;
+}
+
+/* =========================
+   MOBILE MENU BUTTON
+========================= */
+.menu-toggle {
+  display: none;
+  position: fixed;
+  top: 15px;
+  left: 15px;
+  background: #11182b;
+  padding: 10px;
+  border-radius: 6px;
+  cursor: pointer;
+  z-index: 1100;
+}
+
+/* =========================
+   MOBILE VIEW
+========================= */
+@media (max-width: 768px) {
+
+  .menu-toggle {
+    display: block;
+  }
+
+  .sidebar {
+    left: -100%;
+  }
+
+  .sidebar.active {
+    left: 0;
+  }
+
+  .main {
+    margin-left: 0;
+  }
+}
+
+
+
+
+
+
+
+
+/* TABLE */
+.table-box {
+  margin-top: 20px;
+  background: #111827;
+  padding: 20px;
+  border-radius: 10px;
+}
+/* CARD UPGRADE */
+.card {
+  background: linear-gradient(145deg, #1f2937, #111827);
+  padding: 20px;
+  border-radius: 12px;
+  margin-top: 20px;
+  box-shadow: 0 0 15px rgba(0,0,0,0.4);
+}
+
+/* BALANCE */
+.card h1 {
+  font-size: 28px;
+  margin-top: 10px;
+}
+
+/* CRYPTO GRID */
+.crypto-grid {
+  display: flex;
+  gap: 15px;
+  margin-top: 20px;
+  flex-wrap: wrap;
+}
+
+.crypto-card {
+  flex: 1;
+  min-width: 200px;
+  background: #1f2937;
+  padding: 15px;
+  border-radius: 10px;
+  transition: 0.3s;
+}
+
+.crypto-card:hover {
+  transform: translateY(-6px);
+  background: #2b3648;
+}
+
+/* BUTTON */
+button {
+  margin-top: 10px;
+  padding: 8px;
+  border: none;
+  border-radius: 6px;
+  background: gold;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+button:hover {
+  opacity: 0.8;
+}
+
+.transaction-box {
+  background: #0f1424;
+  padding: 20px;
+  border-radius: 14px;
+  margin-top: 20px;
+  overflow: hidden;
+}
+
+/* TITLE */
+.transaction-box h3 {
+  margin-bottom: 15px;
+  color: gold;
+}
+
+/* TABLE WRAPPER */
+.tx-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 14px;
+}
+
+/* HEADER */
+.tx-table thead {
+  background: #11182b;
+}
+
+.tx-table th {
+  text-align: left;
+  padding: 12px;
+  color: #aaa;
+  font-weight: 500;
+  border-bottom: 1px solid rgba(255,255,255,0.05);
+}
+
+/* ROWS */
+.tx-table td {
+  padding: 12px;
+  border-bottom: 1px solid rgba(255,255,255,0.05);
+  color: #ddd;
+}
+
+/* HOVER EFFECT */
+.tx-table tbody tr {
+  transition: 0.3s;
+}
+
+.tx-table tbody tr:hover {
+  background: #151c33;
+  transform: scale(1.01);
+}
+
+/* TYPE COLORS */
+.tx-type.deposit {
+  color: #00ff88;
+  font-weight: bold;
+}
+
+.tx-type.withdraw {
+  color: #ff4d4d;
+  font-weight: bold;
+}
+
+.tx-type.admin {
+  color: gold;
+  font-weight: bold;
+}
+
+/* STATUS BADGE */
+.status {
+  padding: 5px 10px;
+  border-radius: 6px;
+  font-size: 12px;
+}
+
+.status.pending {
+  background: orange;
+  color: black;
+}
+
+.status.approved {
+  background: #00ff88;
+  color: black;
+}
+
+.status.rejected {
+  background: red;
+  color: white;
+}
+
+/* TIME COLUMN */
+.time {
+  color: #888;
+  font-size: 12px;
+}
+/* WELCOME */
+.welcome {
+  margin-bottom: 20px;
+}
+
+/* CARDS */
+.cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px,1fr));
+  gap: 15px;
+  margin-bottom: 25px;
+}
+
+.card {
+  background: #11182b;
+  padding: 20px;
+  border-radius: 12px;
+  transition: 0.3s;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+}
+
+.card h4 {
+  color: #aaa;
+  font-size: 13px;
+}
+
+.card h2 {
+  margin-top: 5px;
+  color: gold;
+}
+
+/* QUICK ACTIONS */
+.quick-actions {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 25px;
+  flex-wrap: wrap;
+}
+
+.quick-actions button {
+  flex: 1;
+  padding: 12px;
+  background: gold;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+/* PROGRESS */
+.progress-box {
+  background: #11182b;
+  padding: 20px;
+  border-radius: 12px;
+  margin-bottom: 25px;
+}
+
+.progress-bar {
+  width: 100%;
+  height: 10px;
+  background: #0f1324;
+  border-radius: 10px;
+  overflow: hidden;
+  margin: 10px 0;
+}
+
+.progress-fill {
+  height: 100%;
+  width: 0%;
+  background: gold;
+  transition: 0.5s;
+}
+
+/* REFERRAL */
+.ref-card {
+  background: #11182b;
+  padding: 20px;
+  border-radius: 12px;
+}
+
+.ref-card input {
+  width: 100%;
+  margin-top: 10px;
+  padding: 8px;
+  background: #0f1324;
+  border: none;
+  color: white;
+}
+
+.ref-card button {
+  margin-top: 10px;
+ 
+  
+}
+
+/* MOBILE */
+@media(max-width:768px){
+  .cards {
+    grid-template-columns: repeat(2,1fr);
+  }
+
+  .quick-actions {
+    flex-direction: column;
+  }
+}

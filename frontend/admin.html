@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/admin.css">
+    
+</head>
+<body>
+  <div class="overlay" onclick="toggleSidebar()"></div>
+  <div class="menu-btn" onclick="toggleSidebar()">☰</div>
+   <div class="layout">
+
+  <!-- SIDEBAR -->
+  <div class="sidebar">
+    
+    <h2>CryptoX</h2>
+
+    <input id="search" placeholder="Search users..." oninput="searchUsers()">
+
+    <a href="admin.html"  class="active">manage Users</a>
+    <a href="admin-users.html">Users</a>
+    <a href="admin-deposit.html">Deposits</a>
+    <a href="admin-withdraw.html">Withdrawals</a>
+    <a href="#">Logs</a>
+
+    <button onclick="logout()">Logout</button>
+  </div>
+
+  <!-- MAIN -->
+  <div class="main">
+
+    <!-- STATS -->
+    <div class="stats">
+      <div class="card"> 👤Users <span id="totalUsers">0</span></div>
+      <div class="card">💰Balance <span id="totalBalance">$0</span></div>
+      
+    </div>
+
+    <!-- CHART -->
+      <div id="editModal" class="modal">
+  <div class="modal-content">
+
+    <h2>Edit User</h2>
+
+    <div class="form-group">
+      <label>Username</label>
+      <input id="editUsername">
+    </div>
+
+    <div class="form-group">
+      <label>Email</label>
+      <input id="editEmail">
+    </div>
+
+   
+    
+    <div class="form-group">
+      <label>New Password (optional)</label>
+      <input id="editPassword" type="password">
+    </div>
+
+    <div class="modal-actions">
+      <button class="save-btn" onclick="saveEdit()">Save Changes</button>
+      <button class="cancel-btn" onclick="closeEdit()">Cancel</button>
+    </div>
+
+  </div>
+</div>
+
+
+    <!-- USERS TABLE -->
+    <div class="table-box">
+      <h3>Users</h3>
+      <table>
+        <thead>
+          <tr>
+            <th>User</th>
+            <th>Email</th>
+            <th>Balance</th>
+            <th>Status</th>
+            <th>Action</th>
+          </tr>
+        </thead>
+        <tbody id="users"></tbody>
+      </table>
+    </div>
+ 
+
+    <!-- ACTIVITY LOG -->
+    <div class="table-box">
+      <h3>Admin Logs</h3>
+      <div id="logs"></div>
+    </div>
+
+  </div>
+
+</div>
+
+<script src="js/admin.js"></script>
+</body>
+</html>

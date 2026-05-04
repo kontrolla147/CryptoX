@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Transactions</title>
+  <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    />
+  <link rel="stylesheet" href="css/transaction.css">
+   <link rel="stylesheet" href="css/dashboard.css">
+</head>
+
+<body>
+
+<div class="menu-toggle" onclick="toggleSidebar()">☰</div>
+
+    <div class="layout">
+      <!-- SIDEBAR -->
+      <div class="sidebar" id="sidebar">
+        <h2 class="logo">CryptoX</h2>
+
+        <a href="dashboard.html" >
+          <i class="fas fa-chart-line"></i>
+          <span>Dashboard</span>
+        </a>
+
+        <a href="deposit.html">
+          <i class="fas fa-wallet"></i>
+          <span>Deposit</span>
+        </a>
+
+        <a href="withdraw.html">
+          <i class="fas fa-arrow-up-right-from-square"></i>
+          <span>Withdraw</span>
+        </a>
+
+        <a href="transactions.html"class="active">
+          <i class="fas fa-list"></i>
+          <span>Transactions</span>
+        </a>
+
+        <a href="#">
+          <i class="fas fa-users"></i>
+          <span>Referrals</span>
+        </a>
+
+        <button onclick="logout()">
+          <i class="fas fa-right-from-bracket"></i>
+          <span>Logout</span>
+        </button>
+      </div>
+      <!-- MAIN -->
+
+      <div class="main">
+
+  <h2>Transaction History</h2>
+
+  <div class="tx-card">
+
+    <!-- HEADER (NAVBAR STYLE) -->
+    <div class="tx-header">
+      <span>Type</span>
+      <span>Amount</span>
+      <span>Date</span>
+      <span>Status</span>
+    </div>
+
+    <!-- ROWS -->
+    <div id="txContainer"></div>
+
+  </div>
+
+</div>
+
+<script src="js/transactions.js"></script>
+<script src="js/dashboard.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Withdrawals</title>
+  <link rel="stylesheet" href="css/admin.css">
+</head>
+<body>
+  <div class="overlay" onclick="toggleSidebar()"></div>
+<div class="menu-btn" onclick="toggleSidebar()">☰</div>
+<div class="layout">
+
+  <div class="sidebar">
+    <h2>CryptoX</h2>
+    <a href="admin.html">Dashboard</a>
+    <a href="admin-users.html">Users</a>
+    <a href="admin-deposit.html">Deposits</a>
+    <a href="admin-withdraw.html" class="active">Withdrawals</a>
+  </div>
+
+  <div class="main">
+    <h2>Pending Withdrawals</h2>
+
+    <table>
+      <thead>
+        <tr>
+          <th>User</th>
+          <th>Amount</th>
+          <th>Wallet</th>
+          <th>Action</th>
+        </tr>
+      </thead>
+      <tbody id="withdrawals"></tbody>
+    </table>
+
+  </div>
+
+</div>
+
+<script src="js/admin-withdraw.js"></script>
+</body>
+</html>

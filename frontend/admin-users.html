@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Admin - Users Wallet</title>
+  <link rel="stylesheet" href="css/admin.css">
+</head>
+<body>
+  <div class="overlay" onclick="toggleSidebar()"></div>
+<div class="menu-btn" onclick="toggleSidebar()">☰</div>
+<div class="layout">
+
+  <div class="sidebar">
+    <h2>CryptoX</h2>
+    <a href="admin.html">manage user</a>
+    <a href="admin-users.html" class="active">Users</a>
+    <a href="admin-deposit.html">Deposits</a>
+    <a href="admin-withdraw.html">Withdrawals</a>
+  </div>
+
+  <div class="main">
+    <h2>Manage User Wallets</h2>
+
+    <table>
+      <thead>
+        <tr>
+          <th>User</th>
+          <th>BTC</th>
+          <th>ETH</th>
+          <th>USDT</th>
+          <th>Action</th>
+        </tr>
+      </thead>
+      <tbody id="users"></tbody>
+    </table>
+
+  </div>
+
+</div>
+
+<script src="js/admin-users.js"></script>
+</body>
+</html>

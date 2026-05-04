@@ -1,0 +1,453 @@
+<!doctype html>
+<html>
+<head>
+  <title>CryptoVault</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+
+<body>
+
+<!-- NAVBAR -->
+<div class="navbar">
+  <div class="logo">CryptoX</div>
+
+  <div class="menu-toggle" onclick="toggleMenu()">☰</div>
+
+  <div class="nav-links" id="navLinks">
+<a href="index.html" class="active">Home</a>
+    <a href="features.html">Features</a>
+    <a href="contact.html">Contact</a>
+    <a href="login.html">Login</a>
+    <a href="register.html" class="nav-btn">Get Started</a>
+  </div>
+</div>
+
+<!-- HERO -->
+<section class="hero-section">
+
+  <div class="hero-left">
+    <h1>Real-Time Crypto Trading Platform</h1>
+    <p>Track, deposit, withdraw and manage assets instantly with live market updates.</p>
+
+    <a class="btn" href="register.html">Get Started</a>
+  </div>
+
+  <div class="hero-right">
+    <img src="images/hero1.jpg" alt="Crypto Dashboard" />
+  </div>
+
+</section>
+
+<!-- LIVE STATS -->
+<section class="live-stats">
+  <div class="card">
+    <h3>BTC Price</h3>
+    <p id="btc">$67,420</p>
+  </div>
+
+  <div class="card">
+    <h3>ETH Price</h3>
+    <p id="eth">$3,120</p>
+  </div>
+
+  <div class="card">
+    <h3>Users Online</h3>
+    <p>1,248</p>
+  </div>
+</section>
+
+
+<section class="market-section">
+
+  <h2>Live Crypto Market</h2>
+
+  <table class="market-table">
+
+    <thead>
+      <tr>
+        <th>Coin</th>
+        <th>Price</th>
+        <th>24h Change</th>
+        <th>Status</th>
+      </tr>
+    </thead>
+
+    <tbody>
+      <tr>
+        <td>BTC</td>
+        <td id="btc">$67,420</td>
+        <td class="up">+2.4%</td>
+        <td class="up">▲ Rising</td>
+      </tr>
+
+      <tr>
+        <td>ETH</td>
+        <td id="eth">$3,120</td>
+        <td class="down">-1.1%</td>
+        <td class="down">▼ Falling</td>
+      </tr>
+
+      <tr>
+        <td>SOL</td>
+        <td>$142</td>
+        <td class="up">+5.2%</td>
+        <td class="up">▲ Rising</td>
+      </tr>
+
+      <tr>
+        <td>BNB</td>
+        <td>$580</td>
+        <td class="up">+1.8%</td>
+        <td class="up">▲ Rising</td>
+      </tr>
+
+    </tbody>
+
+  </table>
+
+</section>
+
+<!-- ✅ SLIDER (CORRECT POSITION) -->
+<div class="hero-slider">
+
+  <div class="slide active">
+    <img src="images/buss.jpg" />
+    <div class="overlay">
+      <h1 class="slide-title">Showing You the Way of Success</h1>
+      <p class="slide-text">Start your journey to financial freedom today</p>
+      <a href="register.html" class="slide-btn">Get Started</a>
+    </div>
+  </div>
+
+  <div class="slide">
+    <img src="images/people.jpg" />
+    <div class="overlay">
+      <h1 class="slide-title">Business & Individual Consulting</h1>
+      <p class="slide-text">Expert guidance tailored for your growth</p>
+      <a href="features.html" class="slide-btn">Learn More</a>
+    </div>
+  </div>
+
+  <div class="slide">
+    <img src="images/people2.jpg" />
+    <div class="overlay">
+      <h1 class="slide-title">Secure Crypto Investments</h1>
+      <p class="slide-text">Your assets are protected with top security</p>
+      <a href="register.html" class="slide-btn">Start Now</a>
+    </div>
+  </div>
+
+  <div class="slide">
+    <img src="images/woman2.jpg" />
+    <div class="overlay">
+      <h1 class="slide-title">Grow Your Wealth Smartly</h1>
+      <p class="slide-text">Track, manage and scale your portfolio</p>
+      <a href="register.html" class="slide-btn">Join Today</a>
+    </div>
+  </div>
+
+  <!-- DOTS -->
+  <div class="dots"></div>
+
+</div>
+
+<!-- FEATURES -->
+<section class="why-choose">
+
+  <h2 class="section-title">Why Choose <b class="ch1">CryptoX</b>?</h2>
+  <p class="section-subtitle">Built for speed, security and real-time trading experience</p>
+
+  <div class="why-grid">
+
+    <div class="why-card">
+      <div class="icon">⚡</div>
+      <h3>Fast Transactions</h3>
+      <p>Deposits and withdrawals are processed instantly after approval with zero delays.</p>
+    </div>
+
+    <div class="why-card">
+      <div class="icon">🔐</div>
+      <h3>Top Security</h3>
+      <p>JWT authentication, encrypted sessions and admin-controlled approvals protect your funds.</p>
+    </div>
+
+    <div class="why-card">
+      <div class="icon">📊</div>
+      <h3>Live Market Data</h3>
+      <p>Track BTC, ETH and USDT prices in real time with dynamic updates.</p>
+    </div>
+
+    <div class="why-card">
+      <div class="icon">🌍</div>
+      <h3>Global Access</h3>
+      <p>Access your account anywhere in the world with full mobile compatibility.</p>
+    </div>
+
+  </div>
+
+  
+
+</section>
+<section class="how-simple">
+
+  <h2>How It Works</h2>
+  <p>Start in 3 easy steps</p>
+
+  <div class="flow">
+
+    <div class="flow-item">
+      <span>1</span>
+      <p>Create Account</p>
+    </div>
+
+    <div class="flow-line"></div>
+
+    <div class="flow-item">
+      <span>2</span>
+      <p>Deposit Funds</p>
+    </div>
+
+    <div class="flow-line"></div>
+
+    <div class="flow-item">
+      <span>3</span>
+      <p>Start Earning</p>
+    </div>
+
+  </div>
+
+  <a href="register.html" class="flow-btn">Get Started</a>
+
+</section>
+
+<section class="testimonial-section">
+  
+  
+
+  <div class="testimonial-container">
+
+    <!-- LEFT: TESTIMONIALS -->
+    <div class="test-left">
+
+  <div class="test-header">
+    <h2>What Our Users Say</h2>
+    <p>Real feedback from traders using CryptoX daily</p>
+  </div>
+
+  <!-- testimonial cards here -->
+  <div class="testimonial-card active">
+    <p>“CryptoX helped me scale my income in just weeks. Withdrawals are fast and smooth.”</p>
+
+    <div class="user">
+      <h4>John Carter <span class="verified">✔</span></h4>
+      <span class="country">🇺🇸 USA</span>
+    </div>
+
+    <div class="stars">★★★★★</div>
+  </div>
+
+  <div class="testimonial-card">
+    <p>“Very clean platform. Everything feels secure and professional.”</p>
+
+    <div class="user">
+      <h4>Sarah Williams <span class="verified">✔</span></h4>
+      <span class="country">🇬🇧 UK</span>
+    </div>
+
+    <div class="stars">★★★★★</div>
+  </div>
+
+  <div class="testimonial-card">
+    <p>“I’ve used many platforms, but CryptoX feels the most stable and trustworthy.”</p>
+
+    <div class="user">
+      <h4>Daniel Lee <span class="verified">✔</span></h4>
+      <span class="country">🇨🇦 Canada</span>
+    </div>
+
+    <div class="stars">★★★★★</div>
+  </div>
+
+</div>
+
+
+    <!-- RIGHT: IMAGE CARD -->
+    <div class="test-right">
+
+      <div class="image-card">
+        <img src="images/tst.jpg">
+
+        <div class="image-overlay">
+     
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<section class="live-activity">
+
+  <h2>Live Activity</h2>
+
+  <div class="activity-box" id="activityBox">
+    <p id="activityText">Loading activity...</p>
+  </div>
+
+</section>
+
+<section class="help-center">
+
+  <h2 class="title">Help Center</h2>
+  <p class="subtitle">Find answers to common questions</p>
+
+  <div class="faq-container">
+
+    <div class="faq-item">
+      <button class="faq-question">
+        <span>How do deposits work?</span>
+        <span class="icon">+</span>
+      </button>
+      <div class="faq-answer">
+        Deposits are submitted by users and remain pending until admin approval. Once approved, the balance is updated instantly.
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-question">
+        <span>How do withdrawals work?</span>
+        <span class="icon">+</span>
+      </button>
+      <div class="faq-answer">
+        Withdrawals require admin approval. After approval, funds are deducted and sent to your wallet.
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-question">
+        <span>Is my account secure?</span>
+        <span class="icon">+</span>
+      </button>
+      <div class="faq-answer">
+        Yes. We use encrypted sessions, JWT authentication, and admin-controlled transactions.
+      </div>
+    </div>
+
+  </div>
+
+</section>
+
+<section class="plans-side">
+
+  <div class="plans-header">
+    <h2>Investment Plans</h2>
+    <p>Choose a plan that fits your financial goals</p>
+  </div>
+
+  <div class="plans-row">
+
+    <div class="plan-box">
+      <h3>Starter</h3>
+      <p class="roi">5% ROI</p>
+      <p>7 Days</p>
+      <p>$50 - $500</p>
+    <a href="register.html" class="btn-action">Start</a>
+    </div>
+
+    <div class="plan-box highlight">
+      <h3>Pro</h3>
+      <p class="roi">12% ROI</p>
+      <p>14 Days</p>
+      <p>$500 - $5,000</p>
+     <a href="register.html" class="btn-action">Invest</a>
+    </div>
+
+    <div class="plan-box">
+      <h3>Elite</h3>
+      <p class="roi">20% ROI</p>
+      <p>30 Days</p>
+      <p>$5,000+</p>
+<a href="register.html" class="btn-action">Go Elite</a>
+    </div>
+
+    <!-- NEW -->
+    <div class="plan-box">
+      <h3>Premium</h3>
+      <p class="roi">30% ROI</p>
+      <p>45 Days</p>
+      <p>$10,000+</p>
+    <a href="register.html" class="btn-action">Upgrade</a>
+    </div>
+
+    <!-- NEW -->
+    <div class="plan-box">
+      <h3>VIP</h3>
+      <p class="roi">50% ROI</p>
+      <p>60 Days</p>
+      <p>$25,000+</p>
+    <a href="register.html" class="btn-action">Join VIP</a>
+    </div>
+
+  </div>
+
+</section>
+
+<footer class="footer">
+
+  <div class="footer-container">
+
+    <!-- BRAND -->
+    <div class="footer-box">
+      <h2 class="logo">CryptoX</h2>
+      <p>
+        A secure crypto trading platform for deposits, withdrawals, and real-time asset tracking.
+      </p>
+    </div>
+
+    <!-- LINKS -->
+    <div class="footer-box">
+      <h3>Quick Links</h3>
+      <a href="index.html">Home</a>
+      <a href="features.html">Features</a>
+      <a href="contact.html">Contact</a>
+      <a href="login.html">Login</a>
+    </div>
+    
+
+    <!-- SUPPORT -->
+    <div class="footer-box">
+      <h3>Support</h3>
+      <a href="#">Help Center</a>
+      <a href="#">FAQs</a>
+      <a href="#">Security</a>
+      <a href="#">Terms</a>
+    </div>
+
+    <!-- NEWSLETTER -->
+    <div class="footer-box">
+      <h3>Stay Updated</h3>
+      <p>Get latest crypto updates</p>
+
+      <div class="newsletter">
+        <input type="email" placeholder="Enter email" />
+        <button>Join</button>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- BOTTOM BAR -->
+  <div class="footer-bottom">
+    <p>© 2014 CryptoX. All rights reserved.</p>
+  </div>
+
+</footer>
+
+
+<script src="js/main.js"></script>
+
+</body>
+</html>

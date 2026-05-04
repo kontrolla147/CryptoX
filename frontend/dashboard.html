@@ -1,0 +1,154 @@
+<!doctype html>
+<html>
+  <head>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    />
+    <title>Dashboard</title>
+    <link rel="stylesheet" href="css/dashboard.css" />
+  </head>
+  <body>
+    <div class="menu-toggle" onclick="toggleSidebar()">☰</div>
+
+    <div class="layout">
+      <!-- SIDEBAR -->
+      <div class="sidebar" id="sidebar">
+        <h2 class="logo">CryptoX</h2>
+
+        <a href="dashboard.html" class="active">
+          <i class="fas fa-chart-line"></i>
+          <span>Dashboard</span>
+        </a>
+
+        <a href="deposit.html">
+          <i class="fas fa-wallet"></i>
+          <span>Deposit</span>
+        </a>
+
+        <a href="withdraw.html">
+          <i class="fas fa-arrow-up-right-from-square"></i>
+          <span>Withdraw</span>
+        </a>
+
+        <a href="transactions.html">
+          <i class="fas fa-list"></i>
+          <span>Transactions</span>
+        </a>
+
+        <a href="#">
+          <i class="fas fa-users"></i>
+          <span>Referrals</span>
+        </a>
+
+        <button onclick="logout()">
+          <i class="fas fa-right-from-bracket"></i>
+          <span>Logout</span>
+        </button>
+      </div>
+      <!-- MAIN -->
+
+      <div class="main">
+        <!-- WELCOME -->
+
+        <div class="welcome">
+          <h2>Welcome, <span id="username">User</span> 👋</h2>
+
+          <p>Your portfolio is performing well today 🚀</p>
+        </div>
+        <!-- PORTFOLIO CARDS -->
+
+        <div class="cards">
+          <div class="card">
+            <h4>Total Balance</h4>
+
+            <h2 id="balance">$0</h2>
+          </div>
+
+          <div class="card">
+            <h4>Total Deposit</h4>
+
+            <h2 id="deposit">$0</h2>
+          </div>
+
+          <div class="card">
+            <h4>Total Withdrawal</h4>
+
+            <h2 id="withdraw">$0</h2>
+          </div>
+
+          <div class="card">
+            <h4>Profit Earned</h4>
+
+            <h2 id="profit">$0</h2>
+          </div>
+
+          <div class="card">
+            <h4>Pending</h4>
+
+            <h2 id="pending">0</h2>
+          </div>
+        </div>
+       
+        <div class="quick-actions">
+          <button onclick="go('deposit.html')">Deposit</button>
+
+          <button onclick="go('withdraw.html')">Withdraw</button>
+
+          <button onclick="go('plans.html')">Upgrade Plan</button>
+
+          <button onclick="copyRef()">Copy Referral</button>
+        </div>
+
+        <!-- PROFIT PROGRESS -->
+
+        <div class="progress-box">
+          <h3>Investment Progress</h3>
+
+          <div class="progress-bar">
+            <div class="progress-fill" id="progressFill"></div>
+          </div>
+
+          <p id="progressText">0% completed</p>
+        </div>
+
+        <!-- REFERRAL CARD -->
+
+        <div class="ref-card">
+          <h3>Referral Earnings</h3>
+
+          <p>Total Referrals: <b id="refCount">0</b></p>
+
+          <p>Total Earned: <b id="refEarn">$0</b></p>
+
+          <input
+            id="refLink"
+            readonly
+            value="https://yoursite.com/register?ref=123"
+          />
+
+          <button onclick="copyRef()">Copy Link</button>
+        </div>
+
+        <div class="transaction-box">
+          <h3>📊 Transaction History</h3>
+
+          <table class="tx-table">
+            <thead>
+              <tr>
+                <th>Type</th>
+                <th>Amount</th>
+                <th>Status</th>
+                <th>Time</th>
+              </tr>
+            </thead>
+
+            <tbody id="transactions"></tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+
+    <script src="js/dashboard.js"></script>
+  </body>
+</html>
