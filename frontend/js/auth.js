@@ -1,4 +1,4 @@
-const API = "http://localhost:5000/api/auth"
+const API = window.location + "/api/auth"
 
 async function register() {
   const username = document.getElementById("username").value.trim()
@@ -19,7 +19,7 @@ async function register() {
     return
   }
 
-  const res = await fetch("http://localhost:5000/api/auth/register", {
+  const res = await fetch(API + "/register", {
     method: "POST",
     headers: { "Content-Type": "application/json" },
     body: JSON.stringify({ username, email, password })
@@ -42,7 +42,7 @@ async function login() {
   const email = document.getElementById("email").value.trim()
   const password = document.getElementById("password").value.trim()
 
-  const res = await fetch("http://localhost:5000/api/auth/login", {
+  const res = await fetch(API + "/login", {
     method: "POST",
     headers: { "Content-Type": "application/json" },
     body: JSON.stringify({ email, password })

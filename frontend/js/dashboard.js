@@ -1,3 +1,5 @@
+const API = window.location + "/api/user"
+
 const token = localStorage.getItem("token")
 
 if (!token) {
@@ -11,7 +13,7 @@ if (!token) {
 async function loadDashboard() {
   try {
     // GET USER
-    const res = await fetch("http://localhost:5000/api/user/me", {
+    const res = await fetch(API + "/me", {
       headers: { Authorization: "Bearer " + token }
     })
 
@@ -34,7 +36,7 @@ if (usdt) usdt.innerText = user.usdtWallet || "Not set"
 
     // REFERRAL LINK
     const userId = JSON.parse(atob(token.split(".")[1])).id
-    const refLink = `http://localhost:5500/register.html?ref=${userId}`
+    const refLink = window.location + `/register.html?ref=${userId}`
     document.getElementById("refLink").value = refLink
 
     loadTransactions()
@@ -49,7 +51,7 @@ if (usdt) usdt.innerText = user.usdtWallet || "Not set"
 // =========================
 async function loadTransactions() {
   try {
-    const res = await fetch("http://localhost:5000/api/user/transactions", {
+    const res = await fetch(API + "/transactions", {
       headers: { Authorization: "Bearer " + token }
     })
 
@@ -115,7 +117,7 @@ async function loadTransactions() {
 async function deposit() {
   const amount = document.getElementById("depositAmount").value
 
-  await fetch("http://localhost:5000/api/user/deposit", {
+  await fetch(API +"/deposit", {
     method: "POST",
     headers: {
       "Content-Type": "application/json",
@@ -134,7 +136,7 @@ async function deposit() {
 async function withdraw() {
   const amount = document.getElementById("withdrawAmount").value
 
-  await fetch("http://localhost:5000/api/user/withdraw", {
+  await fetch(API + "/withdraw", {
     method: "POST",
     headers: {
       "Content-Type": "application/json",

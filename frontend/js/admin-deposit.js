@@ -1,8 +1,10 @@
+const API = window.location + "/api/admin"
+
 const token = localStorage.getItem("token")
 
 async function loadDeposits() {
   try {
-    const res = await fetch("http://localhost:5000/api/admin/deposits", {
+    const res = await fetch(API + "/deposits", {
       headers: {
         Authorization: "Bearer " + token
       }
@@ -44,7 +46,7 @@ function renderDeposits(data) {
 
 // APPROVE
 async function approve(id) {
-  await fetch(`http://localhost:5000/api/admin/approve-deposit/${id}`, {
+  await fetch(API + `/approve-deposit/${id}`, {
     method: "PUT",
     headers: {
       Authorization: "Bearer " + token
@@ -57,7 +59,7 @@ async function approve(id) {
 
 // REJECT
 async function reject(id) {
-  await fetch(`http://localhost:5000/api/admin/reject-deposit/${id}`, {
+  await fetch(API + `/reject-deposit/${id}`, {
     method: "PUT",
     headers: {
       Authorization: "Bearer " + token

@@ -1,7 +1,9 @@
+const API = window.location + "/api/admin"
+
 const token = localStorage.getItem("token")
 
 async function loadWithdrawals() {
-  const res = await fetch("http://localhost:5000/api/admin/withdrawals", {
+  const res = await fetch(API + "/withdrawals", {
     headers: {
       Authorization: "Bearer " + token
     }
@@ -30,7 +32,7 @@ async function loadWithdrawals() {
 
 // APPROVE
 async function approve(id) {
-  await fetch(`http://localhost:5000/api/admin/approve-withdraw/${id}`, {
+  await fetch(API + `/approve-withdraw/${id}`, {
     method: "PUT",
     headers: {
       Authorization: "Bearer " + token
@@ -43,7 +45,7 @@ async function approve(id) {
 
 // REJECT
 async function reject(id) {
-  await fetch(`http://localhost:5000/api/admin/reject-withdraw/${id}`, {
+  await fetch(API + `/reject-withdraw/${id}`, {
     method: "PUT",
     headers: {
       Authorization: "Bearer " + token

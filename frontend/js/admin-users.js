@@ -1,7 +1,9 @@
+const API = window.location + "/api/admin"
+
 const token = localStorage.getItem("token")
 
 async function loadUsers() {
-  const res = await fetch("http://localhost:5000/api/admin/users", {
+  const res = await fetch(API + "/users", {
     headers: {
       Authorization: "Bearer " + token
     }
@@ -42,7 +44,7 @@ async function saveWallet(id) {
   const ethWallet = document.getElementById("eth-" + id).value
   const usdtWallet = document.getElementById("usdt-" + id).value
 
-  await fetch(`http://localhost:5000/api/admin/wallets/${id}`, {
+  await fetch(API + `/wallets/${id}`, {
     method: "PUT",
     headers: {
       "Content-Type": "application/json",

@@ -1,4 +1,4 @@
-const API = "http://localhost:5000/api/auth"
+const API = window.location + "/api/auth"
 
 async function adminLogin() {
   const email = document.getElementById("email").value.trim()

@@ -1,10 +1,12 @@
+const API = window.location + "/api/user"
+
 const token = localStorage.getItem("token")
 
 if (!token) window.location = "login.html"
 
 // LOAD WALLETS
 async function loadWallets() {
-  const res = await fetch("http://localhost:5000/api/user/me", {
+  const res = await fetch(API + "/me", {
     headers: { Authorization: "Bearer " + token }
   })
 
@@ -26,7 +28,7 @@ function copyText(id) {
 async function submitDeposit() {
   const amount = document.getElementById("amount").value
 
-  await fetch("http://localhost:5000/api/user/deposit", {
+  await fetch(API + "/deposit", {
     method: "POST",
     headers: {
       "Content-Type": "application/json",

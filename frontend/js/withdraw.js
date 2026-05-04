@@ -7,7 +7,7 @@ async function submitWithdraw() {
   const address = document.getElementById("address").value
   const coin = document.getElementById("coin").value
 
-  await fetch("http://localhost:5000/api/user/withdraw", {
+  await fetch(window.location + "/withdraw", {
     method: "POST",
     headers: {
       "Content-Type": "application/json",

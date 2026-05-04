@@ -1,3 +1,6 @@
+
+const API = window.location + "/api/admin"
+
 const token = localStorage.getItem("token")
 const role = localStorage.getItem("role")
 
@@ -21,7 +24,7 @@ function openEdit(user) {
 // =========================
 async function loadUsers() {
   try {
-    const res = await fetch("http://localhost:5000/api/admin/users", {
+    const res = await fetch(API + "/users", {
     headers: {
       Authorization: "Bearer " + token
     }
@@ -100,7 +103,7 @@ function searchUsers() {
 // DELETE USER
 // =========================
 function deleteUser(id) {
-  fetch(`http://localhost:5000/api/admin/user/${id}`, {
+  fetch(API + `/user/${id}`, {
     method: "DELETE",
     headers: {
       Authorization: "Bearer " + token
@@ -115,7 +118,7 @@ function deleteUser(id) {
 async function addBalance(id) {
   const amount = document.getElementById("add-" + id).value
 
-  await fetch(`http://localhost:5000/api/admin/balance/add/${id}`, {
+  await fetch(API + `/balance/add/${id}`, {
     method: "PUT",
     headers: {
       "Content-Type": "application/json",
@@ -133,7 +136,7 @@ async function addBalance(id) {
 async function subBalance(id) {
   const amount = document.getElementById("sub-" + id).value
 
-  await fetch(`http://localhost:5000/api/admin/balance/subtract/${id}`, {
+  await fetch(API + `/balance/subtract/${id}`, {
     method: "PUT",
     headers: {
       "Content-Type": "application/json",
@@ -151,7 +154,7 @@ async function subBalance(id) {
 async function updateWallet(id) {
   const value = document.getElementById("wallet-" + id).value
 
-  await fetch(`http://localhost:5000/api/admin/wallets/${id}`, {
+  await fetch(API + `/wallets/${id}`, {
     method: "PUT",
     headers: {
       "Content-Type": "application/json",
@@ -197,7 +200,7 @@ async function saveEdit() {
 
   const password = document.getElementById("editPassword").value
 
-  await fetch(`http://localhost:5000/api/admin/user/${editingUserId}`, {
+  await fetch(API + `/user/${editingUserId}`, {
     method: "PUT",
     headers: {
       "Content-Type": "application/json",
@@ -208,7 +211,7 @@ async function saveEdit() {
 
   if (password) {
     await fetch(
-      `http://localhost:5000/api/admin/reset-password/${editingUserId}`,
+      API + `/reset-password/${editingUserId}`,
       {
         method: "PUT",
         headers: {
@@ -243,7 +246,7 @@ document.querySelectorAll(".learn-btn").forEach(btn => {
   })
 })
 function updateUser(id) {
-  fetch(`http://localhost:5000/api/admin/user/${id}`, {
+  fetch(API + `/user/${id}`, {
     method: "PUT",
     headers: {
       "Content-Type": "application/json",
