@@ -4,21 +4,27 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Admin - Users Wallet</title>
-  <link rel="stylesheet" href="css/admin.css">
+  <link rel="stylesheet" href="css/admin-users.css">
 </head>
 <body>
   <div class="overlay" onclick="toggleSidebar()"></div>
 <div class="menu-btn" onclick="toggleSidebar()">☰</div>
 <div class="layout">
 
+  <!-- SIDEBAR / NAV -->
   <div class="sidebar">
     <h2>CryptoX</h2>
-    <a href="admin.html">manage user</a>
-    <a href="admin-users.html" class="active">Users</a>
-    <a href="admin-deposit.html">Deposits</a>
-    <a href="admin-withdraw.html">Withdrawals</a>
-  </div>
 
+    <input id="search" placeholder="Search users..." oninput="searchUsers()">
+
+    <a href="admin.html">Manage Users</a>
+    <a href="admin-users.html"class="active">Users</a>
+    <a href="admin-deposit.html" >Deposits</a>
+    <a href="admin-withdraw.html">Withdrawals</a>
+    <a href="#">Logs</a>
+
+    <button onclick="logout()">Logout</button>
+  </div>
   <div class="main">
     <h2>Manage User Wallets</h2>
 

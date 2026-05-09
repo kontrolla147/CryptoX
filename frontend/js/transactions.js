@@ -6,7 +6,7 @@ if (!token) {
 
 
 async function loadTransactions() {
-  const res = await fetch(window.location.origin + "/my", {
+  const res = await fetch(window.location.origin + "/api/transactions/my", {
     headers: { Authorization: "Bearer " + token }
   })
 

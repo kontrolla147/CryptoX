@@ -312,36 +312,130 @@ button:nth-child(4) {
 }
 
 /* MOBILE */
+/* =========================
+   MOBILE RESPONSIVE FIX
+========================= */
 @media (max-width: 768px) {
 
+  body {
+    overflow-x: hidden;
+  }
+
+  /* ===== MENU BUTTON ===== */
   .menu-btn {
     display: block;
-  }
-
-  .layout {
-    flex-direction: column;
-  }
-
-  .sidebar {
     position: fixed;
-    top: 0;
-    left: -260px; /* HIDDEN */
-    width: 240px;
-    height: 100%;
-    z-index: 2000;
-    transition: 0.3s;
+    top: 12px;
+    left: 12px;
+    z-index: 3000;
+    background: #11182b;
+    color: white;
+    padding: 10px 14px;
+    border-radius: 8px;
+    font-size: 22px;
+    cursor: pointer;
   }
 
-  .sidebar.active {
-    left: 0; /* SHOW */
+  /* ===== OVERLAY ===== */
+  .overlay {
+    display: none;
   }
 
   .overlay.active {
     display: block;
   }
 
+  /* ===== LAYOUT ===== */
+  .layout {
+    flex-direction: column;
+  }
+
+  /* ===== SIDEBAR ===== */
+  .sidebar {
+    position: fixed;
+    top: 0;
+    left: -260px;
+    width: 250px;
+    height: 100vh;
+    background: #11182b;
+    z-index: 2500;
+    padding-top: 70px;
+    transition: 0.3s ease;
+    overflow-y: auto;
+  }
+
+  .sidebar.active {
+    left: 0;
+  }
+
+  /* ===== MAIN CONTENT ===== */
   .main {
+    margin-left: 0;
+    padding: 70px 15px 20px;
+    width: 100%;
+  }
+
+  /* ===== STATS ===== */
+  .stats {
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
+
+  .card {
+    font-size: 14px;
+    padding: 14px;
+  }
+
+  .card span {
+    font-size: 18px;
+  }
+
+  /* ===== TABLE ===== */
+  .table-box {
+    overflow-x: auto;
+    padding: 15px;
+  }
+
+  table {
+    min-width: 600px;
+  }
+
+  th, td {
+    font-size: 13px;
+    padding: 10px;
+    white-space: nowrap;
+  }
+
+  /* ===== INPUTS ===== */
+  input {
+ 
+    font-size: 14px;
+    padding: 10px;
+  }
+
+  /* ===== BUTTONS ===== */
+  button {
+    font-size: 12px;
+    padding: 8px 10px;
+  }
+
+  /* ===== MODAL ===== */
+  .modal-content {
+    width: 95%;
     padding: 20px;
-    margin-top: 50px;
+  }
+
+  .modal-actions {
+    flex-direction: column;
+  }
+
+  .save-btn,
+  .cancel-btn {
+    width: 100%;
+  }
+
+  /* ===== LOGS ===== */
+  #logs {
+    font-size: 12px;
   }
 }

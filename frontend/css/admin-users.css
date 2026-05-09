@@ -31,6 +31,7 @@ body {
 .sidebar {
   width: 250px;
   background: #11182b;
+
   padding: 25px 20px;
 
   display: flex;
@@ -51,6 +52,7 @@ body {
 .sidebar input {
   width: 100%;
   padding: 12px;
+
   border: none;
   outline: none;
 
@@ -90,9 +92,8 @@ body {
   color: white;
 
   border-radius: 10px;
-  cursor: pointer;
 
-  font-size: 14px;
+  cursor: pointer;
   transition: 0.3s;
 }
 
@@ -106,27 +107,13 @@ body {
 .main {
   flex: 1;
   padding: 30px;
+  overflow-x: auto;
 }
 
-/* PAGE TITLE */
+/* TITLE */
 .main h2 {
   margin-bottom: 20px;
   font-size: 28px;
-}
-
-/* =========================
-   NOTIFICATION
-========================= */
-.notify {
-  display: none;
-
-  background: #11182b;
-  color: gold;
-
-  padding: 14px;
-  border-radius: 10px;
-
-  margin-bottom: 20px;
 }
 
 /* =========================
@@ -143,31 +130,21 @@ body {
   overflow-x: auto;
 }
 
-/* TABLE TITLE */
-.table-box h3 {
-  margin-bottom: 18px;
-  color: gold;
-}
-
-/* TABLE */
+/* =========================
+   TABLE
+========================= */
 table {
   width: 100%;
   border-collapse: collapse;
-  min-width: 700px;
+  min-width: 850px;
 }
 
-/* TABLE HEAD */
+/* HEAD */
 thead {
   background: rgba(255,255,255,0.04);
 }
 
-th {
-  color: gold;
-  font-size: 14px;
-  font-weight: 600;
-}
-
-/* TABLE CELLS */
+/* CELLS */
 th,
 td {
   padding: 14px;
@@ -175,39 +152,39 @@ td {
   font-size: 14px;
 }
 
-/* ROW */
+/* HEAD TEXT */
+th {
+  color: gold;
+  font-weight: 600;
+}
+
+/* ROWS */
 tr {
   border-bottom: 1px solid rgba(255,255,255,0.05);
 }
 
-tr:hover {
+tbody tr:hover {
   background: rgba(255,255,255,0.03);
 }
 
 /* =========================
-   STATUS
+   INPUTS
 ========================= */
-.status {
-  padding: 6px 10px;
+td input {
+  width: 100%;
+  min-width: 180px;
+
+  padding: 10px 12px;
+
+  border: none;
+  outline: none;
+
+  background: #0f1324;
+  color: white;
+
   border-radius: 8px;
 
-  font-size: 12px;
-  font-weight: bold;
-}
-
-.status.pending {
-  background: rgba(255, 193, 7, 0.15);
-  color: #ffc107;
-}
-
-.status.approved {
-  background: rgba(0, 200, 83, 0.15);
-  color: #00c853;
-}
-
-.status.rejected {
-  background: rgba(255, 82, 82, 0.15);
-  color: #ff5252;
+  font-size: 13px;
 }
 
 /* =========================
@@ -215,38 +192,28 @@ tr:hover {
 ========================= */
 button {
   border: none;
-  padding: 8px 12px;
+
+  padding: 10px 14px;
 
   border-radius: 8px;
+
+  background: gold;
+  color: black;
+
   cursor: pointer;
 
   font-size: 12px;
+  font-weight: 600;
+
   transition: 0.3s;
 }
 
-/* APPROVE */
-button:first-of-type {
-  background: #00c853;
-  color: white;
-}
-
-button:first-of-type:hover {
-  background: #00b14a;
-}
-
-/* REJECT */
-button:last-of-type {
-  background: #ff5252;
-  color: white;
-  margin-left: 6px;
-}
-
-button:last-of-type:hover {
-  background: #e64646;
+button:hover {
+  background: #e6c200;
 }
 
 /* =========================
-   MOBILE MENU BUTTON
+   MENU BUTTON
 ========================= */
 .menu-btn {
   display: none;
@@ -267,6 +234,7 @@ button:last-of-type:hover {
   justify-content: center;
 
   font-size: 24px;
+
   cursor: pointer;
 
   z-index: 3000;
@@ -298,7 +266,7 @@ button:last-of-type:hover {
 }
 
 /* =========================
-   MOBILE RESPONSIVE
+   MOBILE
 ========================= */
 @media (max-width: 768px) {
 
@@ -336,18 +304,14 @@ button:last-of-type:hover {
     padding: 75px 15px 20px;
   }
 
-  /* TITLES */
+  /* TITLE */
   .main h2 {
     font-size: 22px;
   }
 
-  .table-box h3 {
-    font-size: 16px;
-  }
-
   /* TABLE */
   table {
-    min-width: 650px;
+    min-width: 800px;
   }
 
   th,
@@ -357,21 +321,16 @@ button:last-of-type:hover {
     white-space: nowrap;
   }
 
-  /* BUTTONS */
+  /* INPUT */
+  td input {
+    min-width: 160px;
+    font-size: 12px;
+  }
+
+  /* BUTTON */
   button {
-    padding: 7px 10px;
+    padding: 8px 10px;
     font-size: 11px;
-  }
-
-  /* SEARCH */
-  .sidebar input {
-    font-size: 14px;
-  }
-
-  /* NOTIFY */
-  .notify {
-    font-size: 14px;
-    padding: 12px;
   }
 }
 
@@ -388,18 +347,23 @@ button:last-of-type:hover {
     font-size: 20px;
   }
 
+  .sidebar {
+    width: 220px;
+  }
+
   th,
   td {
     font-size: 12px;
     padding: 8px;
   }
 
-  .sidebar {
-    width: 220px;
+  td input {
+    min-width: 140px;
+    padding: 8px;
   }
 
   button {
     font-size: 10px;
-    padding: 6px 8px;
+    padding: 7px 8px;
   }
 }

@@ -23,16 +23,24 @@ router.get("/me", auth, async (req, res) => {
 
 
 router.post("/deposit", auth, async (req, res) => {
-  const { amount } = req.body
+
+  const { amount, coin } = req.body
+
+  const user = await User.findById(req.user.id)
 
   await Transaction.create({
     userId: req.user.id,
-    type: "deposit",
+    username: user.username,
+    coin,
     amount: Number(amount),
+    type: "deposit",
     status: "pending"
   })
 
-  res.json({ message: "Deposit submitted" })
+  res.json({
+    message: "Deposit request submitted"
+  })
+
 })
 
 // WITHDRAW

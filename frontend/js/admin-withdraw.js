@@ -17,9 +17,9 @@ async function loadWithdrawals() {
   data.forEach(tx => {
     tbody.innerHTML += `
       <tr>
-        <td>${tx.userId}</td>
-        <td>$${tx.amount}</td>
-        <td>${tx.walletAddress}</td>
+     <td>${tx.username}</td>
+<td>${tx.amount}</td>
+<td>${tx.walletAddress}</td>
 
         <td>
           <button onclick="approve('${tx._id}')">Approve</button>

@@ -1,7 +1,12 @@
 const mongoose = require("mongoose")
 
 const transactionSchema = new mongoose.Schema({
+
   userId: { type: String, required: true },
+
+  username: String,          
+  walletAddress: String,     
+  coin: String,              
 
   type: {
     type: String,
@@ -20,6 +25,7 @@ const transactionSchema = new mongoose.Schema({
     type: Date,
     default: Date.now
   }
+
 })
 
 module.exports = mongoose.model("Transaction", transactionSchema)

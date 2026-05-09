@@ -25,7 +25,7 @@ function renderDeposits(data) {
   data.forEach(tx => {
     container.innerHTML += `
       <tr>
-        <td>${tx.userId}</td>
+       <td>${tx.username}</td>
         <td>$${tx.amount}</td>
         <td>${new Date(tx.createdAt).toLocaleString()}</td>
 
