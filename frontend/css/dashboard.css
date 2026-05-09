@@ -106,7 +106,7 @@ body {
 .menu-toggle {
   display: none;
   position: fixed;
-  top: 15px;
+  top: auto;
   left: 15px;
   background: #11182b;
   padding: 10px;
